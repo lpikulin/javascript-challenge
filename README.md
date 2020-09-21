@@ -1,3 +1,12 @@
+Linda Pikulin
+homework assignment for JavaScript 9/20/2020
+UFO-level-1 contains the code to search the UFO data based on date.
+
+UFO-level-2 contains partial code to search the UFO data based on multiple fields. At this point the function to filter the data is not funcitoning. I need to figure out how to filter based on multiple values, but will have to revisit it at a later date.
+
+
+
+
 # JavaScript Homework - JavaScript and DOM Manipulation
 
 ## Background

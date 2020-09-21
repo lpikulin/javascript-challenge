@@ -37,16 +37,37 @@ function runEnter() {
   //call the function to clear the table
   clearTable();
   // Select the input element and get the raw HTML node
-  var inputElement = d3.select("#datetime");
+  var fltDate = d3.select("#datetime");
   // Get the value property of the input element
-  var inputValue = inputElement.property("value");
+  var inputDate = fltDate.property("value");
   //check to make sure we got the input value
-  console.log(inputValue);
- 
-//select table body
+  
+  var fltCity=d3.select("#city"); 
+  var inputCity=fltCity.property("value"); 
+  
+  var fltState=d3.select("#state"); 
+  var inputState=fltState.property("value"); 
+  
+  var fltCountry=d3.select("#country"); 
+  var inputCountry=fltCountry.property("value"); 
+  
+  var fltShape=d3.select("#shape"); 
+  var inputShape=fltShape.property("value"); 
+  
+
+  var filterInfo = {
+    date:inputDate,
+    city:inputCity,
+    state:inputState,
+    country:inputCountry,
+    shape:inputShape
+  };
+
+console.info(filterInfo);
+  //select table body
   var tbody_filtered = d3.select("tbody");
   //filter data based on input value
-  var filteredData = tableData.filter(ufo => ufo.datetime === inputValue);
+  var filteredData = tableData.keys(filterInfo).forEach(key => ufo.key==key);
   //check to see if we have the right data
   console.log(filteredData);
 
